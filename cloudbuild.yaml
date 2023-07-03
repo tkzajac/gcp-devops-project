@@ -1,7 +1,6 @@
 steps:
-- name: 'docker'
-  args: ['build', '-t', 'eu.gcr.io/$PROJECT_ID/gcpdevops', '.']
-images: 
-- 'gcr.io/$PROJECT_ID/gcpdevops'
+- name: gcr.io/cloud-builders/docker
+ args: [ 'build', '-t', 'europe-west1-docker.pkg.dev/$PROJECT_ID/gcpdevops/python-flask:001', '.' ]
+ 
 options:
   logging: CLOUD_LOGGING_ONLY
