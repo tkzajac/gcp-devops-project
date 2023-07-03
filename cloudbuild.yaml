@@ -2,5 +2,8 @@ steps:
 - name: gcr.io/cloud-builders/docker
   args: [ 'build', '-t', 'europe-west1-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/python-flask:001', '.' ]
 
+- name: gcr.io/cloud-builders/docker
+  args: ['push', 'europe-west1-docker.pkg.dev/PROJECT_ID/quickstart-docker-repo/python-flask']
+
 options:
   logging: CLOUD_LOGGING_ONLY
